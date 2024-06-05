@@ -1,8 +1,10 @@
-import numpy as np
+import sys
 
-n, m = map(int, input().split())
+n = int(sys.argv[1])
+m = int(sys.argv[2])
 
-circle_array = np.arange(1, n+1)
+
+circle_array = list(range(1, n + 1))
 path = []
 current_index = 0
 first = False

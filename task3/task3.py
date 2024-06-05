@@ -1,4 +1,5 @@
 import json
+import sys
 
 
 def process_tests(tests, values):
@@ -11,9 +12,9 @@ def process_tests(tests, values):
             process_tests(test['values'], values)
 
 
-values_path = input()
-tests_path = input()
-report_path = input()
+values_path = sys.argv[1]
+tests_path = sys.argv[2]
+report_path = sys.argv[3]
 
 with open(values_path, 'r') as f:
     values_data = json.load(f)

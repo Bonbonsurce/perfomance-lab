@@ -1,4 +1,5 @@
 from math import sqrt
+import sys
 
 
 def distance(x_, y_):
@@ -7,9 +8,9 @@ def distance(x_, y_):
 
 # circle_params_path = 'circle_rad_cen.txt'
 # dots_params_path = 'dots.txt'
+circle_params_path = sys.argv[1]
+dots_params_path = sys.argv[2]
 
-circle_params_path = input()
-dots_params_path = input()
 
 with open(circle_params_path, 'r') as file:
     x, y = map(float, file.readline().strip().split())

@@ -1,3 +1,6 @@
+import sys
+
+
 def count_moves(numbers):
     numbers.sort()
     average = numbers[len(numbers) // 2]
@@ -7,7 +10,7 @@ def count_moves(numbers):
 
 
 # numbers_path = 'numbers.txt'
-numbers_path = input()
+numbers_path = sys.argv[1]
 nums = []
 
 with open(numbers_path, 'r') as file:
